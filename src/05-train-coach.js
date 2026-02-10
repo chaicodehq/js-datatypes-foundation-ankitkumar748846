@@ -49,10 +49,13 @@
  */
 export function findPassenger(passengers, name) {
   // Your code here
+  if(!Array.isArray(passengers) || typeof name !== "string") return undefined;
+  return passengers.find(p => typeof p.name ==="string" && p.name.toLowerCase()===name.toLowerCase());
 }
 
 export function getPassengerIndex(passengers, name) {
   // Your code here
+  
 }
 
 export function isAnyWaitlisted(passengers) {
